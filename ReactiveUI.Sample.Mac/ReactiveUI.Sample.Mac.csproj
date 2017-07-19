@@ -8,9 +8,8 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>ReactiveUI.Sample.Mac</RootNamespace>
     <AssemblyName>ReactiveUI.Sample.Mac</AssemblyName>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
-    <TargetFrameworkIdentifier>Xamarin.Mac</TargetFrameworkIdentifier>
     <MonoMacResourcePrefix>Resources</MonoMacResourcePrefix>
+    <UseXamMacFullFramework>true</UseXamMacFullFramework>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -27,9 +26,9 @@
     <IncludeMonoRuntime>false</IncludeMonoRuntime>
     <UseSGen>true</UseSGen>
     <UseRefCounting>true</UseRefCounting>
-    <HttpClientHandler></HttpClientHandler>
-    <LinkMode></LinkMode>
-    <XamMacArch></XamMacArch>
+    <HttpClientHandler>HttpClientHandler</HttpClientHandler>
+    <LinkMode>None</LinkMode>
+    <XamMacArch>x86_64</XamMacArch>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -44,14 +43,36 @@
     <IncludeMonoRuntime>true</IncludeMonoRuntime>
     <UseSGen>true</UseSGen>
     <UseRefCounting>true</UseRefCounting>
-    <LinkMode>SdkOnly</LinkMode>
-    <HttpClientHandler></HttpClientHandler>
+    <LinkMode>None</LinkMode>
+    <HttpClientHandler>HttpClientHandler</HttpClientHandler>
     <XamMacArch></XamMacArch>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.Mac" />
+    <Reference Include="System.Reactive.Interfaces">
+      <HintPath>..\packages\Rx-Interfaces.2.2.5\lib\net45\System.Reactive.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Core">
+      <HintPath>..\packages\Rx-Core.2.2.5\lib\net45\System.Reactive.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Linq">
+      <HintPath>..\packages\Rx-Linq.2.2.5\lib\net45\System.Reactive.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.PlatformServices">
+      <HintPath>..\packages\Rx-PlatformServices.2.2.5\lib\net45\System.Reactive.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Windows.Threading">
+      <HintPath>..\packages\Rx-XAML.2.2.5\lib\net45\System.Reactive.Windows.Threading.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="ReactiveUI">
+      <HintPath>..\packages\reactiveui-core.6.5.0\lib\Net45\ReactiveUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Splat">
+      <HintPath>..\packages\Splat.1.6.2\lib\Net45\Splat.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
@@ -73,6 +94,7 @@
   <ItemGroup>
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -85,5 +107,6 @@
   <ItemGroup>
     <InterfaceDefinition Include="Main.storyboard" />
   </ItemGroup>
+  <Import Project="..\ReactiveUI.Sample.Shared\ReactiveUI.Sample.Shared.projitems" Label="Shared" Condition="Exists('..\ReactiveUI.Sample.Shared\ReactiveUI.Sample.Shared.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Mac\Xamarin.Mac.CSharp.targets" />
 </Project>

@@ -3,10 +3,10 @@
   <PropertyGroup>
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
     <HasSharedItems>true</HasSharedItems>
-    <SharedGUID>29c8c00a-e99f-4883-9f68-ad35e9f4f2f2</SharedGUID>
+    <SharedGUID>fd7583f4-e559-4b60-895f-579e35660728</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
-    <Import_RootNamespace>ReactiveUI.Shared</Import_RootNamespace>
+    <Import_RootNamespace>ReactiveUI.Sample.Shared</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SampleViewModel.cs" />

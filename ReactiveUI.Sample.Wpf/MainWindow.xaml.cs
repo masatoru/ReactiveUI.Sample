@@ -24,7 +24,7 @@ namespace ReactiveUI.Sample.Wpf
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = new SampleViewModel();
+            DataContext=new SampleViewModel();
         }
     }
 }

@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReactiveUI.Sample.Wpf", "Re
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "ReactiveUI.Sample.Shared", "ReactiveUI.Sample.Shared\ReactiveUI.Sample.Shared.shproj", "{FD7583F4-E559-4B60-895F-579E35660728}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReactiveUI.Sample.Mac", "ReactiveUI.Sample.Mac\ReactiveUI.Sample.Mac.csproj", "{D92BAACE-1601-4829-991B-DB29315DF024}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		ReactiveUI.Sample.Shared\ReactiveUI.Sample.Shared.projitems*{c2e17702-a151-4fdd-9379-465506e3868b}*SharedItemsImports = 4
@@ -21,6 +23,10 @@ Global
 		{C2E17702-A151-4FDD-9379-465506E3868B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2E17702-A151-4FDD-9379-465506E3868B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2E17702-A151-4FDD-9379-465506E3868B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D92BAACE-1601-4829-991B-DB29315DF024}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D92BAACE-1601-4829-991B-DB29315DF024}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D92BAACE-1601-4829-991B-DB29315DF024}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D92BAACE-1601-4829-991B-DB29315DF024}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

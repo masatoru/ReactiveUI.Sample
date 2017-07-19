@@ -8,7 +8,7 @@
         Title="MainWindow" Height="350" Width="525">
     <Grid>
         <Button Command="{Binding Send}" Content="Tweet" HorizontalAlignment="Left" Margin="28,47,0,0" VerticalAlignment="Top" Width="75"/>
-        <TextBox Text="{Binding Text.Value}" HorizontalAlignment="Left" Height="23" Margin="28,19,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="462"/>
+        <TextBox Text="{Binding Text,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="23" Margin="28,19,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="462"/>
 
     </Grid>
 </Window>
